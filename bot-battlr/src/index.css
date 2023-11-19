@@ -14,23 +14,34 @@ code {
 
 .bots {
   list-style: none;
-  background-color: rgb(236, 202, 202);
-  
-}
 
+  padding-inline: 2px;
+}
+#bots-display {
+  background-color: rgb(240, 132, 132);
+}
 #mybots {
   cursor: pointer;
 }
 #columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding-inline: 2px;
+  max-width: auto;
+}
+#my-collection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.newbots {
+  list-style: none;
+  padding-inline: 5px;
+  margin-left: 5px;
 }
 #header {
   text-align: center;
   background-color: rgb(245, 131, 131);
   margin-top: initial;
-  height: 50px;
+  height: 90px;
 }
 #btn {
   cursor: pointer;
@@ -41,4 +52,7 @@ code {
 
 #discharge-bot {
   display: flex;
+}
+#myBots {
+  background-color: rgb(247, 168, 168);
 }

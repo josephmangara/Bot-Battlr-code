@@ -33,7 +33,7 @@ const removeBotFromMyCollection = ((bots) => {
   return (
    <>
      <Header />
-     <Mybotarmy myBots={myBots} removeBotFromMyCollection={removeBotFromMyCollection} />
+     <Mybotarmy myBots={myBots} removeBotFromMyCollection={removeBotFromMyCollection} /><br></br>
      <BotCollection bots={bots} myBotCollection={myBotCollection} />
    </>
   )
