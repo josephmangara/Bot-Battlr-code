@@ -1,11 +1,15 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import BotCollection from './components/BotCollection';
+import Mybotarmy from './components/Mybotarmy';
+
 
 function App() {
 
-const [bots, setBots] = useState([])
+const [bots, setBots] = useState([]);
+const[myBots, setMyBots] = useState([]);
+
 const apiURL = "http://localhost:3000/bots"
 useEffect(() => {
   fetch(apiURL)
@@ -14,12 +18,23 @@ useEffect(() => {
     console.log(data)
     setBots(data)
   })
-}, [])
+}, []);
 
+const myBotCollection = ((bots) => {
+  if(!myBots.some(myBot => myBot.id === bots.id)){
+  setMyBots([...myBots, bots])
+}  
+});
+
+const removeBotFromMyCollection = ((bots) => {
+  const newBotCollection = myBots.filter(myBot => myBot.id !== bots.id);
+  setMyBots(newBotCollection);
+})
   return (
    <>
      <Header />
-     <BotCollection bots={bots} />
+     <Mybotarmy myBots={myBots} removeBotFromMyCollection={removeBotFromMyCollection} />
+     <BotCollection bots={bots} myBotCollection={myBotCollection} />
    </>
   )
 }

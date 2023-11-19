@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bots {
+  list-style: none;
+  background-color: rgb(236, 202, 202);
+  
+}
+
+#mybots {
+  cursor: pointer;
+}
+#columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-inline: 2px;
+}
+#header {
+  text-align: center;
+  background-color: rgb(245, 131, 131);
+  margin-top: initial;
+  height: 50px;
+}
+#btn {
+  cursor: pointer;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+}
+
+#discharge-bot {
+  display: flex;
+}

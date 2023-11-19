@@ -3,8 +3,10 @@
 export default function Header(){
 
 return (
+    <>
     <div id="header">
-        <p>Bot Collection</p>
+        <h1>Bot Collection</h1>
     </div>
+    </>
 )
 }

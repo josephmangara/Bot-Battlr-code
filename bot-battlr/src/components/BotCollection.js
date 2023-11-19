@@ -1,19 +1,24 @@
 
-export default function BotCollection({bots}){
+export default function BotCollection({bots, myBotCollection}){
 
 
 return (
     <>
-      <ul>
+      <ul id="columns">
         {bots.map(bots => (
-            <li key={bots.id}>
-              <p>{bots.name}</p>
-              <p>{bots.health}</p>
-              <p>{bots.armor}</p>
-              <p>{bots.damage}</p>
-              <p>{bots.bot_class}</p>
-              <p>{bots.catchphrase}</p>
-              <img src={bots.avatar_url} alt="bot avatar"></img>
+            <li key={bots.id} className="bots">
+              <img src={bots.avatar_url} alt="bot avatar" id="mybots"></img>
+              <p>Name: {bots.name}</p>
+              <p>Health: {bots.health}</p>
+              <p>Armor: {bots.armor}</p>
+              <p>Damage: {bots.damage}</p>
+              <p>Class: {bots.bot_class}</p>
+              <p>Catchphrase: {bots.catchphrase}</p>
+              <h6 id="discharge-bot">
+                <button id="btn">X</button>
+                <p>Discharge bot from service</p>
+              </h6>
+              <button onClick={() => myBotCollection(bots)}>Add to my collection</button>
             </li>
         ))}
       </ul>
