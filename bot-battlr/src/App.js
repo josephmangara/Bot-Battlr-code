@@ -1,5 +1,8 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import Header from './components/Header';
+import BotCollection from './components/BotCollection';
+
 function App() {
 
 const [bots, setBots] = useState([])
@@ -15,6 +18,8 @@ useEffect(() => {
 
   return (
    <>
+     <Header />
+     <BotCollection bots={bots} />
    </>
   )
 }
