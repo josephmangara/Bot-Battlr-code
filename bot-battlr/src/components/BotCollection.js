@@ -1,5 +1,5 @@
 
-export default function BotCollection({bots, myBotCollection}){
+export default function BotCollection({bots, myBotCollection, permanentlyDeleteBot}){
 
 
 return (
@@ -16,7 +16,7 @@ return (
               <p>Class: {bots.bot_class}</p>
               <p>Catchphrase: {bots.catchphrase}</p>
               <h6 id="discharge-bot">
-                <button id="btn">X</button>
+                <button id="btn" onClick={() => permanentlyDeleteBot(bots.id)}>X</button>
                 <p>Discharge bot from service</p>
               </h6>
               {/* <button onClick={() => myBotCollection(bots)}>Add to my collection</button> */}

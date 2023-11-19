@@ -25,12 +25,12 @@ code {
 }
 #columns {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   max-width: auto;
 }
 #my-collection {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 .newbots {
   list-style: none;
@@ -47,7 +47,7 @@ code {
   cursor: pointer;
   background-color: red;
   width: 40px;
-  height: 40px;
+  height: 20px;
 }
 
 #discharge-bot {
@@ -55,4 +55,7 @@ code {
 }
 #myBots {
   background-color: rgb(247, 168, 168);
+}
+#body {
+  background-color: rgb(238, 189, 130);
 }
