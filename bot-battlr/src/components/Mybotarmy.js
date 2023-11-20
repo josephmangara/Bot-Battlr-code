@@ -14,7 +14,7 @@ return(
             <p>Armor: {bots.armor}</p>
             <p>Damage: {bots.damage}</p>
             <p>Class: {bots.bot_class}</p>
-            <p>Catchphrase: {bots.catchphrase}</p>
+            {/* <p>Catchphrase: {bots.catchphrase}</p> */}
             {/* <button onClick={() => removeBotFromMyCollection(bots)}>Remove</button> */}
         </li>
       ))}

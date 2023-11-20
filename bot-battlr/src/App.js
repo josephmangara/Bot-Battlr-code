@@ -32,7 +32,7 @@ const removeBotFromMyCollection = ((bots) => {
 })
 
 const permanentlyDeleteBot = (bot) => {
-  fetch(`http://localhost:3000/bots/${bot.id}`, {
+  fetch(`https://my-json-server.typicode.com/josephmangara/bserever/bots/${bot.id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json"
