@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Bot-Battlr-code/static/css/main.4f7af848.css",
+    "main.js": "/Bot-Battlr-code/static/js/main.f332f1d6.js",
+    "static/js/787.97f0feec.chunk.js": "/Bot-Battlr-code/static/js/787.97f0feec.chunk.js",
+    "index.html": "/Bot-Battlr-code/index.html",
+    "main.4f7af848.css.map": "/Bot-Battlr-code/static/css/main.4f7af848.css.map",
+    "main.f332f1d6.js.map": "/Bot-Battlr-code/static/js/main.f332f1d6.js.map",
+    "787.97f0feec.chunk.js.map": "/Bot-Battlr-code/static/js/787.97f0feec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f7af848.css",
+    "static/js/main.f332f1d6.js"
+  ]
+}
