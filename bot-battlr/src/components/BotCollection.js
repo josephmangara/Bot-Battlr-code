@@ -14,7 +14,6 @@ return (
               <p>Armor: {bots.armor}</p>
               <p>Damage: {bots.damage}</p>
               <p>Class: {bots.bot_class}</p>
-              {/* <p>Catchphrase: {bots.catchphrase}</p> */}
               <h6 id="discharge-bot">
                 <button id="btn" onClick={() => permanentlyDeleteBot(bots)}>X</button>
                 <p>Discharge bot from service</p>
