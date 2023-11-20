@@ -24,25 +24,32 @@ const myBotCollection = ((bots) => {
   if(!myBots.some(myBot => myBot.id === bots.id)){
   setMyBots([...myBots, bots])
 }  
-});{permanentlyDeleteBot()}
+});
 
 const removeBotFromMyCollection = ((bots) => {
   const newBotCollection = myBots.filter(myBot => myBot.id !== bots.id);
   setMyBots(newBotCollection);
 })
 
-function permanentlyDeleteBot(botObjects){
-  fetch("http://localhost:3000/bots", {
+const permanentlyDeleteBot = (bot) => {
+  fetch(`http://localhost:3000/bots/${bot.id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json"
     },
-    body:JSON.stringify(botObjects)
+    body: JSON.stringify(bot)
   })
   .then(res => res.json())
-  .then(botObjects => console.log(botObjects))
+  .then(responseData => {
+    console.log(responseData);
+    
+    const updatedBots = bots.filter(b => b.id !== bot.id);
+    setBots(updatedBots);
+  })
+  .catch(error => {
+    console.error('Error deleting bot', error);
+  });
 };
-
   return (
    <div id='body'>
      <Header />
