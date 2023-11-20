@@ -10,7 +10,7 @@ function App() {
 const [bots, setBots] = useState([]);
 const[myBots, setMyBots] = useState([]);
 
-const apiURL = "http://localhost:3000/bots"
+const apiURL = "https://my-json-server.typicode.com/josephmangara/bserever/bots/"
 useEffect(() => {
   fetch(apiURL)
   .then(res => res.json())
